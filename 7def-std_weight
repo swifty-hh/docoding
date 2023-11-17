@@ -1,0 +1,12 @@
+def std_weight(height, gender):
+    if gender == "male":
+        return height * height * 0.0022
+    elif gender == "female":
+        return height * height * 0.0021
+    else:
+        print("Are you alien?")
+
+height = float(input("What is your height in cm? "))
+gender = input("What is your gender? male? female? ")
+weight = round(std_weight(height, gender), 2) # insert values of height and gender
+print("{0} {1}'s standard weight is {2}kg.".format(height, gender, weight))
