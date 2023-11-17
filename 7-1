@@ -1,0 +1,11 @@
+height = float(input("What is your height in cm? "))
+gender = input("What is your gender? male? female? ")
+
+if gender == "male":
+    std_weight = height * height * 0.0022
+    print("Your standard weight is ", std_weight, "kg.")
+elif gender == "female":
+    std_weight = height * height * 0.0021
+    print("Your standard weight is ", std_weight, "kg.")
+else:
+    print("R u alien?")
