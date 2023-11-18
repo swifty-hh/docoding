@@ -1,0 +1,6 @@
+for i in range(1, 5):
+    with open("week_" + str(i), "w") as report_file:
+        report_file.write("week {0}".format(i))
+        report_file.write("\n1")
+        report_file.write("\n2")
+        report_file.write("\n3")
