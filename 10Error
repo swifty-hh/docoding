@@ -1,0 +1,28 @@
+class SoldOutError(Exception):
+    pass
+
+chicken = 10
+waiting = 1
+
+while(True):
+    try:
+        print("[Available Chicken : {0}]".format(chicken))
+        order = int(input("How many chickens do you want?"))
+        if order > chicken:
+            print("We don't have that much.")
+        elif order <= 0:
+            raise ValueError
+        else:
+            print("[Waiting Number : {0}] {1} is/are prepared."\
+                .format(waiting, order))
+            waiting += 1
+            chicken -= order
+
+        if chicken == 0:
+            raise SoldOutError
+        
+    except ValueError:
+        print("Wrong value entered")
+    except SoldOutError:
+        print("Sold Out.")
+        break
