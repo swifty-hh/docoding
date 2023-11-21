@@ -1,0 +1,11 @@
+import os
+folder = "sample_dir"
+
+if os.path.exists(folder):
+    print("we have it")
+    os.rmdir(folder)
+    print("deleted")
+
+else:
+    os.makedirs(folder)
+    print(folder, "made it")
